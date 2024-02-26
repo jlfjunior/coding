@@ -1,4 +1,4 @@
-namespace Algorithms.Playground.Sorting;
+namespace Coding.Run.Sorting;
 
 public abstract class InsertionSorting
 {

@@ -1,4 +1,4 @@
-namespace Algorithms.Playground.Searching;
+namespace Coding.Run.Searching;
 
 public abstract class LinearSearching
 {

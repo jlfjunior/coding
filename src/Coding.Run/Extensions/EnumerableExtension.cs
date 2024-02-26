@@ -1,4 +1,4 @@
-namespace Algorithms.Playground.Extensions;
+namespace Coding.Run.Extensions;
 
 public static class EnumerableExtension
 {
