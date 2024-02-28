@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coding.Run", "src\Coding.Run\Coding.Run.csproj", "{70647D3F-C5DC-4C3A-B23C-F5529F3B1DAC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coding.Algorithms", "Coding.Algorithms\Coding.Algorithms.csproj", "{85842D11-8336-4104-B6E4-20157CC2363B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coding.DataStructures", "Coding.DataStructures\Coding.DataStructures.csproj", "{576B877C-9AA8-453F-A34F-B177A13E1232}"
@@ -20,10 +18,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{70647D3F-C5DC-4C3A-B23C-F5529F3B1DAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70647D3F-C5DC-4C3A-B23C-F5529F3B1DAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70647D3F-C5DC-4C3A-B23C-F5529F3B1DAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70647D3F-C5DC-4C3A-B23C-F5529F3B1DAC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{85842D11-8336-4104-B6E4-20157CC2363B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{85842D11-8336-4104-B6E4-20157CC2363B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85842D11-8336-4104-B6E4-20157CC2363B}.Release|Any CPU.ActiveCfg = Release|Any CPU
