@@ -1,3 +1,5 @@
+using System.Data;
+
 namespace Coding.DataStructures.LinkedLists;
 
 public class SinglyLinkedList
@@ -42,7 +44,7 @@ public class SinglyLinkedList
 
     public int GetHead()
         => Head is not null
-            ? Head.Data
+            ? Head.Value
             : throw new InvalidOperationException("List does not have elements stored.");
     
 
@@ -63,13 +65,43 @@ public class SinglyLinkedList
 
         current.Next = new Node(data);
     }
+
+    public int PopOnHead()
+    {
+        var current = Head;
+        Head = Head.Next;
+
+        return current.Value;
+    }
+
+    public int PopOnTail()
+    {
+        var current = Head;
+
+        if (current.Next == null)
+        {
+            Head = null;
+            return current.Value;
+        }
+
+        while (current.Next.Next != null)
+        {
+            current = current.Next;
+        }
+
+        
+        var element = current.Next;
+        current.Next = null;
+        
+        return element.Value;
+    }
 }
 
 class Node
 {
-    public Node(int data) => (Data) = (data);
-    public Node(int data, Node next) => (Data, Next) = (data, next);
+    public Node(int value) => (Value) = (value);
+    public Node(int value, Node next) => (Value, Next) = (value, next);
 
-    public int Data { get; set; }
+    public int Value { get; set; }
     public Node Next { get; set; }
 }
