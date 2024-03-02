@@ -1,4 +1,5 @@
 using System.Data;
+using System.Runtime.InteropServices;
 
 namespace Coding.DataStructures.LinkedLists;
 
@@ -95,10 +96,73 @@ public class SinglyLinkedList
         
         return element.Value;
     }
+
+    public int GetTail()
+    {
+        var current = Head;
+
+        while (current.Next != null)
+            current = current.Next;
+
+        return current.Value;
+    }
+
+    public int ValueAt(int index)
+    {
+        var current = Head;
+        var count = 0;
+        
+        while (index > count)
+        {
+            current = current.Next;
+            count++;
+        }
+
+        return current.Value;
+    }
+
+    public void InsertAt(int index, int value)
+    {
+        if (Head == null)
+        {
+            Head = new Node(value);
+            return;
+        }
+        
+        var current = Head;
+        var currentIndex = 0;
+        
+        while (current != null && currentIndex < index - 1)
+        {
+            
+            current = current.Next;
+            currentIndex++;
+        }
+
+        var node = new Node(value, current.Next);
+        current.Next = node;
+    }
+
+    public void Reverse()
+    {
+        var dummy = new SinglyLinkedList();
+        var current = Head;
+        
+        while (current.Next != null)
+        {
+            dummy.PushOnHead(current.Value);
+            current = current.Next;
+        }
+
+        dummy.PushOnHead(current.Value);
+
+        Head = dummy.Head;
+    }
 }
 
 class Node
 {
+    public Node() {}
     public Node(int value) => (Value) = (value);
     public Node(int value, Node next) => (Value, Next) = (value, next);
 
