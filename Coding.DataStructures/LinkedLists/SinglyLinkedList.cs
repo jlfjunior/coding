@@ -1,11 +1,8 @@
-using System.Data;
-using System.Runtime.InteropServices;
-
 namespace Coding.DataStructures.LinkedLists;
 
 public class SinglyLinkedList
 {
-    private Node Head { get; set; }
+    private SinglyNode Head { get; set; }
 
     public bool IsEmpty() => Head is null;
 
@@ -13,12 +10,12 @@ public class SinglyLinkedList
     {
         if (Head == null)
         {
-            Head = new Node(data);
+            Head = new SinglyNode(data);
             return;
         }
 
         var current = Head;
-        Head = new Node(data, current);
+        Head = new SinglyNode(data, current);
     }
 
     /// <summary>
@@ -53,7 +50,7 @@ public class SinglyLinkedList
     {
         if (Head == null)
         {
-            Head = new Node(data);
+            Head = new SinglyNode(data);
             return;
         }
 
@@ -64,7 +61,7 @@ public class SinglyLinkedList
             current = current.Next;
         }
 
-        current.Next = new Node(data);
+        current.Next = new SinglyNode(data);
     }
 
     public int PopOnHead()
@@ -125,7 +122,7 @@ public class SinglyLinkedList
     {
         if (Head == null)
         {
-            Head = new Node(value);
+            Head = new SinglyNode(value);
             return;
         }
         
@@ -139,7 +136,7 @@ public class SinglyLinkedList
             currentIndex++;
         }
 
-        var node = new Node(value, current.Next);
+        var node = new SinglyNode(value, current.Next);
         current.Next = node;
     }
 
@@ -158,14 +155,4 @@ public class SinglyLinkedList
 
         Head = dummy.Head;
     }
-}
-
-class Node
-{
-    public Node() {}
-    public Node(int value) => (Value) = (value);
-    public Node(int value, Node next) => (Value, Next) = (value, next);
-
-    public int Value { get; set; }
-    public Node Next { get; set; }
 }
