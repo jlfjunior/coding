@@ -17,4 +17,14 @@ public abstract class ArrayExtension
         
         return false;
     }
+
+    public static int[] SortedSquares(int[] numbers)
+    {
+        for (var i = 0; i < numbers.Length; i++)
+            numbers[i] = numbers[i] * numbers[i];
+        
+        Array.Sort(numbers);
+        
+        return numbers;
+    }
 }
